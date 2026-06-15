@@ -1,7 +1,7 @@
 # book-recommendation-system
-Sentiment-driven book recommendation system using BERT, VADER, and a 3-model hybrid deep learning ensemble (CNN-LSTM-GRU, CNN-BiLSTM-GRU, LSTM-CNN) achieving 98%+ accuracy on Amazon book reviews.
+Sentiment-driven book recommendation system using BERT, VADER, and a 4-model hybrid deep learning ensemble (CNN-LSTM-GRU, CNN-BiLSTM-GRU, LSTM-CNN, BiLSTM-CNN) achieving 96%+ accuracy on Amazon book reviews.
 
-# Book Recommendation System using Sentiment Analysis and Hybrid Deep Learning (3-Model Ensemble)
+# Book Recommendation System using Sentiment Analysis and Hybrid Deep Learning (4-Model Ensemble)
 
 A sentiment-driven book recommendation system that classifies Amazon book reviews into Positive, Neutral, and Negative sentiments using an ensemble of three hybrid deep learning models.
 
@@ -9,17 +9,18 @@ A sentiment-driven book recommendation system that classifies Amazon book review
 
 ## Overview
 
-This project performs sentiment analysis on Amazon book reviews using VADER for polarity scoring and BERT for contextual embeddings. Three hybrid deep learning models are trained and combined using a weighted soft voting ensemble for sentiment classification.
+This project performs sentiment analysis on Amazon book reviews using VADER for polarity scoring and BERT for contextual embeddings. Four hybrid deep learning models are trained and combined using a weighted soft voting ensemble for sentiment classification.
 
 ---
 
 ## Models Used
 
-| Model | Description |
-|-------|-------------|
-| CNN-LSTM-GRU | CNN for local features + LSTM + GRU for sequential learning |
-| CNN-BiLSTM-GRU | CNN + Bidirectional LSTM + GRU |
-| LSTM-CNN | LSTM for sequential + CNN for feature extraction |
+| Model               | Description                                                              |
+|---------------------|--------------------------------------------------------------------------|
+| CNN-LSTM-GRU        | CNN for local features + LSTM + GRU for sequential learning              |
+| CNN-BiLSTM-GRU      | CNN + Bidirectional LSTM + GRU                                           |
+| LSTM-CNN            | LSTM for sequential + CNN for feature extraction                         |
+| BiLSTM-CNN          | BiLSTM for bidirectional sequential learning + CNN for feature extraction| 
 
 ---
 
@@ -36,7 +37,7 @@ This project performs sentiment analysis on Amazon book reviews using VADER for 
 3. Oversampling - Random oversampling to balance class distribution
 4. Feature Extraction - BERT (bert-base-uncased) 768-dim embeddings (96 tokens)
 5. Feature Engineering - Normalized VADER polarity concatenated with BERT embeddings (96, 769) input
-6. Model Training - Three hybrid models trained with EarlyStopping
+6. Model Training - Four hybrid models trained with EarlyStopping
 7. Ensemble - Weighted soft voting across all three models
 8. Deployment - Streamlit web app exposed via Ngrok
 
