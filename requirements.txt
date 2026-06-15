@@ -1,9 +1,8 @@
 streamlit
-tensorflow
+tensorflow==2.15.1
 torch
 transformers
 nltk
 numpy
 pandas
 scikit-learn
-pyngrok
