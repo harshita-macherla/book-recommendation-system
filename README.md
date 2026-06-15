@@ -65,3 +65,8 @@ Supervisor: Dr. G. Pradeep, Associate Professor, School of Computing, SASTRA Uni
 
 ## Reference
 Devika, P., & Milton, A. (2024). Book recommendation using sentiment analysis and ensembling hybrid deep learning models. Knowledge and Information Systems, 67, 1131-1168. https://doi.org/10.1007/s10115-024-02250-z
+
+##Limitations
+
+Models were trained and deployed in Kaggle using Streamlit and ngrok.
+Public deployment on Streamlit Cloud was limited by TensorFlow/Python compatibility.
